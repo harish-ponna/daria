@@ -1,13 +1,211 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* -----------------common--------------- */
+.heading {
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: #4f586b;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.sub-container {
+  width: 100%;
+  max-width: 1312px;
+  padding: 20px;
+}
+
+div[role="alert"] {
+  color: red;
+}
+
+.content {
+  line-height: 24px;
+  font-size: 16px;
+  color: #4f586b;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.sub-heading {
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: #4f586b;
+}
+
+/* -----------Why Our Directory-------------- */
+
+.directory-items {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  margin-right: 20px;
+}
+
+.item .icon {
+  margin-bottom: 36px;
+}
+
+/* ----------hero ---------------- */
+
+.hero-container {
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.info {
+  width: 528px;
+  color: white;
+}
+
+.info .content {
+  color: white;
+}
+
+.main {
+  font-size: 48px;
+  color: white;
+}
+
+button {
+  background: linear-gradient(236.84deg, #9c8bea 1.49%, #544695 105.35%);
+  height: 48px;
+  width: 204px;
+  left: 0px;
+  top: 312px;
+  border-radius: 50px;
+  padding: 10px, 40px, 10px, 40px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* -----------contact ----------- */
+
+.contact {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-content {
+  width: 40%;
+}
+
+.contact-form {
+  width: 60%;
+  padding: 0 50px;
+}
+
+.input-container {
+  margin-bottom: 30px;
+}
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px dashed grey;
+  outline: none;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.small {
+  color: grey;
+}
+
+.error {
+  color: red;
+}
+
+.footer {
+  background: #3b455a;
+  height: 116.02px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .heading {
+    font-size: 24px;
+    /* margin-bottom: 12px; */
+  }
+
+  .sub-heading {
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+
+  .main {
+    font-size: 28px;
+  }
+
+  .hero-container {
+    height: 600px;
+  }
+
+  .info {
+    margin-top: 160px;
+    width: 270px;
+  }
+
+  .info .content {
+    font-size: 14px;
+  }
+
+  .contact {
+    display: block;
+  }
+
+  .contact-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .contact-form {
+    width: 100%;
+    padding: 0;
+  }
+  .footer {
+    height: 88px;
+  }
+}
+
+/* ---------carousel */
+
+.rec-arrow {
+  background: wheat;
+  color: blue;
 }

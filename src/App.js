@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import Contact from './components/Contact'
+import Directory from './components/Directory'
+import Footer from './components/Footer'
+import Hero from './components/Hero'
+import Wonders from './components/Wonders'
 
-function App() {
+const App = () => {
+
+  const [screen, setScreen] = useState('small')
+
+  const handleResize = () => window.innerWidth < 1200 ? setScreen('small') : setScreen('large')
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize)
+    window.innerWidth < 1200 ? setScreen('small') : setScreen('large')
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Directory screen={screen} />
+      <Hero screen={screen} />
+      <Wonders screen={screen} />
+      <Contact />
+      <Footer/>
+    </>
+  )
 }
 
-export default App;
+export default App
