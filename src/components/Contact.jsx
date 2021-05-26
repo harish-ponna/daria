@@ -62,8 +62,8 @@ const Contact = () => {
     }
 
     return (
-        <div className='container'>
-            <div className="sub-container contact">
+        <div className='container' id='request-info'>
+            <div className="sub-container contact" >
                 <div className="contact-content">
                     <div>
                         <h1 className="heading">Request Info</h1>
@@ -72,7 +72,7 @@ const Contact = () => {
                     <img src="/images/contactImages/contact.png" style={{ width: '100%' }} />
                 </div>
                 <div className="contact-form">
-                    <form id='request-info'>
+                    <form>
                         <div className='input-container'>
                             <input onChange={handleChange} type='text' name='name' placeholder='Name*' />
                             <small className={errors.name ? 'error' : 'small'}>{errors.name || 'Min 3 characters'}</small>
@@ -91,7 +91,9 @@ const Contact = () => {
                             <br />
                         </div>
                     </form>
-                    <button onClick={handleSubmit} >Request Info</button>
+                    <div className="button-box">
+                        <button onClick={handleSubmit} >Request Info</button>
+                    </div>
                 </div>
             </div>
         </div>

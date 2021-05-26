@@ -24,9 +24,6 @@ const breakPoints = [
     { width: 800, itemsToShow: 4.5 },
     { width: 900, itemsToShow: 5 },
     { width: 1000, itemsToShow: 5.5 },
-    { width: 1100, itemsToShow: 6 },
-    { width: 1200, itemsToShow: 6.5 },
-    { width: 1300, itemsToShow: 7 },
 ];
 
 
@@ -46,7 +43,7 @@ const Wonders = ({ screen }) => {
                     {
                         wondersImagesPath.map(image => (
                             <div key={image.path} style={{ marginTop: '30px' }}>
-                                <img src={`/images/wondersImages/${image.path}`} style={{ borderRadius: 20 }} />
+                                <img src={`/images/wondersImages/${image.path}`} style={screen === 'small' ? { borderRadius: 20, width: 152, height: 152 } : { borderRadius: 0, width: 192, height: 192 }} />
                                 <p style={{ textAlign: 'center', color: '#4f586b' }}>{image.name}</p>
                             </div>
                         ))
